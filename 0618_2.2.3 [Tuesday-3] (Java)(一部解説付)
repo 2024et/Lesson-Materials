@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        Scanner in = new Scanner(System.in);
+        int[] data = new int[10];
+        //dataを取得
+        for (int a = 0; a < 10; a++) {
+            data[a] = in.nextInt();
+        }
+        //取得したdataを表示
+        for(int a=0;a<10;a++){
+            System.out.print(data[a]+" ");
+        }
+        System.out.print("\n");
+        //b1とb2の取得
+        int b1 = in.nextInt();
+        int b2 = in.nextInt();
+        //変数b1の値を変数tmpに代入してします。そのあと、変数b1に変数b2の値を代入し、変数b2に変数tmpの値を代入しています。変数tmpを使う理由は、b1 = b2;でb1とb2が同じ値になり、元のb1の値が無くなってしまうからです。変数tmpに元のb1の値を代入しておくことで、b2に代入する値がなくなることを防いでいます。
+        int tmp = data[b1];
+        data[b1] = data[b2];
+        data[b2] = tmp;
+
+        for(int a=0;a<10;a++){
+            System.out.print(data[a]+" ");
+        }
+    }
+}
