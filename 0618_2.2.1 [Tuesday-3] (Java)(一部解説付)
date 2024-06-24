@@ -1,0 +1,37 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] data = new int[10];
+        int a;
+        //data[a]を-1で初期化
+        for (a = 0; a < 10; a++) {
+            data[a] = -1;
+        }
+
+        //表示
+        for (a = 0; a < 10; a++) {
+            System.out.print(data[a] + " ");
+        }
+
+        
+        System.out.println();
+        for (a = 0; a < 10; a++) {
+            //出力結果を見ると、2行目は2倍ずつ増えているので...
+            data[a] = a * 2;
+        }
+        //表示
+        for (a = 0; a < 10; a++) {
+            System.out.print(data[a] + " ");
+        }
+        System.out.println();
+
+        for (a = 0; a < 10; a++) {
+            //出力結果を見ると、3行目は9から1ずつ減っていくので...
+            data[a] = 9 - a;
+        }
+        //表示
+        for (a = 0; a < 10; a++) {
+            System.out.print(data[a] + " ");
+        }
+        
+    }
+}
