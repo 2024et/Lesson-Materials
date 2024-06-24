@@ -1,0 +1,42 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] data = new int[10];
+
+        // 配列にデータを入力
+        //System.out.println("配列のデータを入力してください:");
+        for (int i = 0; i < data.length; i++) {
+            //System.out.print("data[" + i + "]: ");
+            data[i] = scanner.nextInt();
+        }
+
+        // 検索する値を入力
+       //System.out.print("検索する値を入力してください (1-9): ");
+        int x = scanner.nextInt();
+
+        // フラグとカウンタの初期化
+        boolean flag = false;
+        int count = 0;
+
+        // 一致する位置を探し、カウント
+        for (int a = 0; a < data.length; a++) {
+            if (data[a] == x) {
+                System.out.println(x + "は配列の添え字が" + a + "のデータと一致しました");
+                flag = true;
+                count++;
+            }
+        }
+
+        // 一致した個数を出力
+        if (flag) {
+            System.out.println(x + "は" + count + "個ありました");
+        } else {
+            System.out.println(x + "は一つもありませんでした");
+        }
+
+        scanner.close();
+    }
+}
