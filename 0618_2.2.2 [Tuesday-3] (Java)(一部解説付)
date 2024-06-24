@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        Scanner in = new Scanner(System.in);
+        
+        int[] data = new int[10];
+        int[] copy = new int[10];
+        //dataの値を取得
+        for(int a=0;a<10;a++){
+            data[a] = in.nextInt();
+        }
+        //普通にコピーするため、copy = dataとなればよいので...
+        for(int a=0;a<10;a++){
+            copy[a] = data[a];
+        }
+        for(int a=0;a<10;a++){
+            System.out.print(copy[a]+" ");
+        }
+        System.out.print("\n");
+        //逆にする場合は9から引けばよい
+        for(int a=0;a<10;a++){
+            copy[a] = data[9-a];
+        }
+        for(int a=0;a<10;a++){
+            System.out.print(copy[a]+" ");
+        }
+        System.out.println("\n");
+
+    }
+}
