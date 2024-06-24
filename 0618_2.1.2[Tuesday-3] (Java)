@@ -1,0 +1,43 @@
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args){
+		
+	    int a, sum;
+	    int[] tensu = {7, 4, 9, 2, 3, 5, 1, 6};
+
+		sum = 0; 
+		for(a = 0; a < 8; a++){
+			sum+=tensu[a];
+		}
+		System.out.println("全部の和は" + sum);
+		sum = 0;
+		for(a = 0; a < 4; a++){
+			sum+=tensu[a];
+		}
+		System.out.println("前半の和は" + sum);
+		sum = 0;
+		for(a = 4; a < 8; a++){
+			sum+=tensu[a];
+		}
+		System.out.println("後半の和は" + sum);
+		sum = 0;
+		for(a = 0; a < 8;a++){
+			if(a%2==0){
+				sum+=tensu[a];
+			}
+		}
+		System.out.println("偶数番の和は" + sum);
+				sum = 0;
+		for(a = 0; a < 8;a++){
+			if(a%2==1){
+				sum+=tensu[a];
+			}
+		}
+		System.out.println("奇数番の和は" + sum);
+
+
+
+
+	}
+}
