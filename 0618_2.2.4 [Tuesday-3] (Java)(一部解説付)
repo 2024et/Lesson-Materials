@@ -1,0 +1,25 @@
+import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        Scanner in = new Scanner(System.in);
+        int[] data = new int[10];
+        //dataを取得
+        for (int a = 0; a < 10; a++) {
+            data[a] = in.nextInt();
+        }
+        //取得したdataを表示
+        for(int a=0;a<10;a++){
+            System.out.print(data[a]+" ");
+        }
+        System.out.print("\n");
+        //2.2.2のとおり逆の場合は引けばよい。
+        for(int a=0;a<5;a++){
+            int tmp = data[a];
+            data[a] = data[9-a];
+            data[9-a] = tmp;
+        }
+        for(int a=0;a<10;a++){
+            System.out.print(data[a]+" ");
+        }
+    }
+}
