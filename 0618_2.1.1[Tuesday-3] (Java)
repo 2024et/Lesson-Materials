@@ -1,0 +1,22 @@
+//クラス名は必ずMainにする必要があります。
+import java.util.*;
+
+public class Main {
+    public static void main(String args[] ) throws Exception {
+		
+	    Scanner sc = new Scanner(System.in);
+	    int a;
+	    int[] tensu = new int[3];
+	    
+	    for(a=0;a<3;a++){
+			tensu[a] = sc.nextInt();
+			System.out.println("a:"+a+", tensu:"+tensu[a]);
+		}
+	    System.out.println("入力完了");
+    	for(a=2;a>=0;a--){
+			System.out.println("a:"+a+", tensu:"+tensu[a]);
+		}
+	    System.out.println("最終のa:" + a);
+	    sc.close();
+	}
+}
