@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] data = new int[10];
+
+        // 配列にデータを入力
+        for (int i = 0; i < data.length; i++) {
+            //System.out.print("data[" + i + "]: ");
+            data[i] = scanner.nextInt();
+        }
+
+        // 添え字を入力
+        //System.out.print("添え字を入力してください (0-9): ");
+        int x = scanner.nextInt();
+
+        // 添え字が範囲外でないことを確認
+        if (x >= 0 && x < data.length) {
+            System.out.println("添え字が" + x + "のデータは" + data[x]);
+        } else {
+            //System.out.println("無効な添え字です。0から9の範囲で入力してください。");
+        }
+
+        scanner.close();
+    }
+}
