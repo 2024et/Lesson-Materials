@@ -1,0 +1,41 @@
+単に3.2.1の降順を逆にすればいいだけ。
+先ほどのうち、
+if(data[i]>data[j]){
+      tmp = data[i];
+      data[i] = data[j];
+      data[j] = tmp;
+}
+の
+if(data[i]>data[j]){
+を
+if(data[i]<data[j]){
+とすればいいだけということ。
+            
+
+[一応、全文]
+import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        Scanner in = new Scanner(System.in);
+        int[] data = new int[10];
+        int j, i, tmp;
+
+        for(i=0;i<10;i++){
+            data[i] = in.nextInt();
+            System.out.print(data[i]+" ");
+        }
+        System.out.println();
+        for(i=0;i<9;i++){
+            for(j=i+1;j<10;j++){
+                if(data[i]<data[j]){
+                    tmp = data[i];
+                    data[i] = data[j];
+                    data[j] = tmp;
+                }
+            }
+        }
+        for(i=0;i<10;i++){
+            System.out.print(data[i]+" ");
+        }
+    }
+}
