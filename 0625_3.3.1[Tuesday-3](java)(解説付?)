@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        Scanner in = new Scanner(System.in);
+        int[] data = new int[10];
+        //7行目、少し書き方変えたので、うまくいかなかったら「int j, tmp, i=0;」とかで打ってみて！
+        int i, j, tmp;
+        //いつも通りのデータ取得および表示
+        for(i=0;i<10;i++){
+            data[i] = in.nextInt();
+            System.out.print(data[i]+" ");
+        }
+        //改行
+        System.out.println();
+        //ここから先はpdf例文通りまた、前回の内容。
+        for(i=0;i<9;i++){
+            for(j=i+1;j<10;j++){
+                if(data[i]>data[j]){
+                    tmp = data[i];
+                    data[i] = data[j];
+                    data[j] = tmp;
+                }
+            }
+        }
+        //再度表示。
+        for(i=0;i<10;i++){
+            System.out.print(data[i]+" ");
+        }
+    }
+}
