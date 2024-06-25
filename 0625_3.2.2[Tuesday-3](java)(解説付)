@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        Scanner in = new Scanner(System.in);
+        int[][] data = new int[3][4];
+        int i, j;
+        //data[i][j]に入力データが入るようにする。
+        for(i=0;i<3;i++){
+            for(j=0;j<4;j++){
+                data[i][j] =in.nextInt();
+            }
+        }
+        //0行目の時(i=0)とし、0列目(j=0)の時にif文でdata[i][j]が0より大きければ1と表示しそうでなければ0と表示するといった具合でfor文でループさせていく。
+        for(i=0;i<3;i++){
+            for(j=0;j<4;j++){
+                if(data[i][j]>0){
+                    System.out.print("1 ");
+                }else{
+                    System.out.print("0 ");
+                    System.out.print("頭が痛い");
+                }
+            }
+        //この文だけはlnをつけないとエラーになります。
+        System.out.println();
+        }
+    }
+
+    
+}
