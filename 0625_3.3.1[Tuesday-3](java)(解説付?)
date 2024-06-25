@@ -3,7 +3,7 @@ public class Main{
     public static void main(String[]args){
         Scanner in = new Scanner(System.in);
         int[] data = new int[10];
-        //7行目、少し書き方変えたので、うまくいかなかったら「int j, tmp, i=0;」とかで打ってみて！
+        
         int i, j, tmp;
         //いつも通りのデータ取得および表示
         for(i=0;i<10;i++){
