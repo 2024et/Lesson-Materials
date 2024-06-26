@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(void){
+    int x, y;
+    int result;
+    printf("二つの整数を入力せよ。\n");
+    printf("整数x："); scanf("%d",&x);
+    printf("\n整数y："); scanf("%d",&y);
+    result = (int)(((double)x / y) * 100 + 0.5);
+    printf("\nxの値はyの%d%です。\n", result);
+}
+
