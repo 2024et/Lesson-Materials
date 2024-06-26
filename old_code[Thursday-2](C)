@@ -1,1 +1,37 @@
+//0620_10-1
+#include <stdio.h>
 
+int main(void){
+    int n1, n2;
+    printf("二つの整数を入力して下さい。\n");
+    //scanf関数は値を取得するため、"整数n1"の後にscanf関数を入れる。(n2も同様)
+    printf("整数n1："); scanf("%d",&n1);
+    printf("\n整数n2："); scanf("%d",&n2);
+    printf("\nそれらの積は%dです。\n",n1*n2);
+}
+
+//0620 10-2
+#include <stdio.h>
+
+int main(void){
+    int x, y;
+    int result;
+    printf("二つの整数を入力せよ。\n");
+    printf("整数x："); scanf("%d",&x);
+    printf("\n整数y："); scanf("%d",&y);
+    result = (int)(((double)x / y) * 100 + 0.5);
+    printf("\nxの値はyの%d%です。\n", result);
+}
+
+//0620 10-3
+#include <stdio.h>
+
+int main(void){
+    int a, b;
+    int result;
+    printf("二つの整数を入力せよ。\n");
+    printf("整数a："); scanf("%d",&a);
+    printf("整数b："); scanf("%d",&b);
+    result = (a+b)/2;
+    printf("それらの平均は%dです。", result);
+}
