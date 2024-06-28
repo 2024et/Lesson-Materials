@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void){
+    int n1, n2;
+    printf("二つの整数を入力せよ：");
+    printf("\n整数１："); scanf("%d",&n1);
+    printf("\n整数２："); scanf("%d",&n2);
+    if(n1==n2){
+        puts("\nそれらの値は同じです。");
+    }
+    else{
+        puts("\nそれらの値は違います。");
+    }
+}
